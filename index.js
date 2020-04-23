@@ -52,10 +52,21 @@ const todoList = mongoose.model("todos");
 //   }
 // })();
 
+// (async () => {
+//   try {
+//     await todoList.findByIdAndDelete("5ea14d8003e3514810ac8f46");
+//     console.log("Data deleted");
+//   } catch (error) {
+//     console.log(error.message);
+//   }
+// })();
+
 (async () => {
   try {
-    await todoList.findByIdAndDelete("5ea14d8003e3514810ac8f46");
-    console.log("Data deleted");
+    await todoList.updateOne(
+      { _id: "5ea14cada62ad50b10a45c26" },
+      { $set: { fname: "Brayan" } }
+    );
   } catch (error) {
     console.log(error.message);
   }
