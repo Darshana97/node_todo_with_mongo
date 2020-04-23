@@ -3,7 +3,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const app = express();
 
-require("./models/Todos")
+require("./models/Todos");
 
 const mongoUrl =
   "mongodb+srv://darshana:achi@cluster0-cqpnt.azure.mongodb.net/test?retryWrites=true&w=majority";
@@ -28,4 +28,17 @@ app.listen(PORT, () => {
   console.log(`Server is started at ${PORT} `);
 });
 
+const todoList = mongoose.model("todos");
 
+(async () => {
+  try {
+    const todo1 = new todoList({
+      fname: "Pubudu",
+      lname: "Bandara",
+    });
+    await todo1.save();
+    console.log("Data added");
+  } catch (error) {
+    console.log(error.message);
+  }
+})();
