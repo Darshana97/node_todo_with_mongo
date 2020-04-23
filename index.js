@@ -30,15 +30,39 @@ app.listen(PORT, () => {
 
 const todoList = mongoose.model("todos");
 
-(async () => {
-  try {
-    const todo1 = new todoList({
-      fname: "Pubudu",
-      lname: "Bandara",
-    });
-    await todo1.save();
-    console.log("Data added");
-  } catch (error) {
-    console.log(error.message);
-  }
-})();
+// (async () => {
+//   try {
+//     const todo1 = new todoList({
+//       fname: "Pubudu",
+//       lname: "Bandara",
+//     });
+//     await todo1.save();
+//     console.log("Data added");
+//   } catch (error) {
+//     console.log(error.message);
+//   }
+// })();
+
+
+// (async () => {
+//   try {
+//     const all = await todoList.findById("5ea14cada62ad50b10a45c26");
+//     console.log(all);
+//   } catch (error) {
+//     console.log(error.message);
+//   }
+// })();
+
+(async()=>{
+    try {
+
+        
+        
+    } catch (error) {
+        console.log(error.message)
+    }
+
+})()
+
+
+
